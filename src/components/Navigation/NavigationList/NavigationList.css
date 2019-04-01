@@ -1,0 +1,22 @@
+.navigation {
+    width: 50%;
+    float: right;
+}
+.Navigation-list {
+    list-style: none;
+    display: flex;
+}
+.navLink {
+    margin-right: 4rem;
+    font-family: 'Lobster', cursive;
+    font-family: 'Bree Serif', serif;
+}
+.navLink {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.navLink:hover {
+    color: blue;
+}

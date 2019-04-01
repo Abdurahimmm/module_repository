@@ -1,0 +1,9 @@
+Создать Create-react-app
+Устоновить react-router & react-router-dom
+Создать новый проект на FireBase
+Подключить свой react проект на FireBase
+Создать компоненты для этого сайта
+Сверстать меню сайта с роутингом
+Устоновить redux, react-redux & redux-thunk
+Создать общий State
+Сверстать остальные компоненты
