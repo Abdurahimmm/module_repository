@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import NavigationList from '../NavigationList/NavigationList'
 import Logo from './../Logo/Logo';
 import './ToolBar.css'
@@ -6,10 +6,10 @@ import './ToolBar.css'
 const ToolBar = (props) => {
   
   return (
-    <Fragment>
+    <header className="ToolBar">
       <Logo></Logo>
       <NavigationList/>
-    </Fragment>
+    </header>
   );
 }
 

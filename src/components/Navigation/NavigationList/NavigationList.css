@@ -1,22 +1,24 @@
 .navigation {
     width: 50%;
-    float: right;
+    margin-left: auto;
 }
 .Navigation-list {
     list-style: none;
     display: flex;
+    padding-top: 26px;
 }
 .navLink {
-    margin-right: 4rem;
+    margin-right: 3rem;
     font-family: 'Lobster', cursive;
     font-family: 'Bree Serif', serif;
 }
 .navLink {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1.4rem;
+    color: #8e8d8d;
+    font-size: 1.5rem;
 }
 .navLink:hover {
-    color: blue;
+    border-bottom: 3px solid #8e8d8d;
+    text-decoration: none;
+    color: #8e8d8d;
 }

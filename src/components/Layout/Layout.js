@@ -1,12 +1,11 @@
 import React, {Fragment} from 'react';
 import ToolBar from '../Navigation/ToolBar/ToolBar';
-import './Layout.css';
 
 const Layout = (props) => {
   return (
-    <Fragment className="ToolBar">
+    <Fragment>
       <ToolBar/>
-      <main>
+      <main className="main">
         {props.children}
       </main>
     </Fragment>

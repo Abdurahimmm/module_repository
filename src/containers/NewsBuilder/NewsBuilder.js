@@ -1,13 +1,11 @@
 import React, { Component, Fragment } from 'react'
-import News from '../../components/News/News';
-import AddNews from './../../components/AddNews/AddNews';
-import Contact from './../../components/Contact/Contact';
+import Example from './../../components/UI/Carusiel/Carusiel';
 
 export default class NewsBuilder extends Component {
   render() {
     return (
       <Fragment>
-        News Builder Here
+        <Example></Example>
       </Fragment>
     )
   }

@@ -1,3 +1,5 @@
 .ToolBar {
-    background-color: red;
+    background-color: #333;
+    display: flex;
+    height: 100px;
 }
