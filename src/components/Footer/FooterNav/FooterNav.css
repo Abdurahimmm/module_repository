@@ -1,0 +1,18 @@
+.NavigationFooterList {
+    list-style: none;
+}
+.NavLink {
+    margin-right: 3rem;
+    font-family: 'Lobster', cursive;
+    font-family: 'Bree Serif', serif;
+}
+.NavLink {
+    text-decoration: none;
+    color: #8e8d8d;
+    font-size: 1.5rem;
+}
+.NavLink:hover {
+    border-bottom: 3px solid #8e8d8d;
+    text-decoration: none;
+    color: #8e8d8d;
+}
