@@ -1,0 +1,27 @@
+.footer-wrap {
+    flex-grow: 1;
+}
+.FooterIcon {
+    width: 180px;
+    height: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+.fab {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: black;
+}
+.fab:nth-child(5) {
+    margin-right: 0;
+}
+.fab:nth-child(9) {
+    margin-right: 0;
+}
+.fab:hover {
+    text-decoration: none;
+    color: black;
+}
+.socials {
+    border-bottom: 1px solid #000;
+}

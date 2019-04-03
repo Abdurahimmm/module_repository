@@ -4,7 +4,7 @@ import './FooterNav.css';
 
 const FooterNav = () => {
     return (
-        <div>
+        <div className="footer-nav">
             <ul className="NavigationFooterList">
                 <li className="NavigationItem">
                     <NavLink className="NavLink" to='/'>NewsBuilder</NavLink>

@@ -5,7 +5,8 @@ import News from './components/News/News';
 import AddNews from './components/AddNews/AddNews';
 import Contact from './components/Contact/Contact';
 import Layout from './components/Layout/Layout';
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom';
+
 
 class App extends Component {
   render() {

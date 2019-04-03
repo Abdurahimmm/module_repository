@@ -1,3 +1,8 @@
+.footer-nav {
+    margin-top: 2rem;
+    margin-left: 100px;
+    flex-grow: 1;
+}
 .NavigationFooterList {
     list-style: none;
 }
