@@ -1,0 +1,22 @@
+.addNewsTitle {
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  margin-left: 10%;
+}
+.AddNews-form{
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+.formText {
+  width: 40%;
+  height: 50px;
+  border-color: #666;
+  border-bottom-color: #666;
+  margin-bottom: 1%;
+}
+.formTextarea {
+  width: 40%;
+  height: 300px;
+  resize: none;
+}
