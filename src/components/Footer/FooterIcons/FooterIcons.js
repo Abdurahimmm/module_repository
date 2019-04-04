@@ -5,7 +5,7 @@ const FooterIcons = () => {
     return (
         <div className="footer-wrap">
             <div className="FooterIcon">
-                <h3 class="socials">Socials</h3>
+                <h3 className="socials">Socials</h3>
                 <a href="https://facebook.com" className="fab fa-facebook"></a>
                 <a href="https://twitter.com" className="fab fa-twitter"></a>
                 <a href="https://vk.com" className="fab fa-vk"></a>
