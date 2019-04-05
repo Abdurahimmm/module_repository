@@ -81,15 +81,17 @@ class AddNews extends Component {
 
     render() {
         let form = (
-            < form onSubmit = {this.onLogin}
+            <form onSubmit = {this.onLogin}
             className = "AddNews-form" >
+            <h1 className = "addNewsTitle" > Log in to add news </h1>
                 < input className = "formText"
                 type = "email"
                 name = "email"
                 placeholder = "Email"
+                autoComplete = "off"
                 value={this.state.email} 
                 onChange={this.onChangeHandler}/>
-
+            
                 <br/>
                 < input className = "formText"
                 type = "password"
@@ -113,6 +115,14 @@ class AddNews extends Component {
                         onClick={this.onLogout}
                     >Выйти</button>
 
+                    <input
+                        type="text"
+                        placeholder="Введите название статьи"/>
+
+                    <br/>
+
+                    <textarea placeholder="Ваша статья"></textarea>
+
                     <h1>ДОбавить картинку</h1>
 
                     < form onSubmit = {this.onFileUpload}>
@@ -133,7 +143,7 @@ class AddNews extends Component {
 
                         {
                             this.state.fileUrl ?
-                                <img src={this.state.fileUrl} alt="img"/>:
+                                <img className="addImg" src={this.state.fileUrl} alt="img"/>:
                             null
                         }
                     </form>
@@ -144,8 +154,8 @@ class AddNews extends Component {
             );
         }
         return (
-            <div>
-                <h1 className="addNewsTitle">Add news on page</h1>
+            <div className="addNews">
+                
                 {form}
             </div>
         );
