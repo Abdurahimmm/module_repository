@@ -2,7 +2,7 @@
   position: relative;
   background: url(../../assets/images/laptop.jpg) no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 .addNews:after {
   position: absolute;
@@ -21,6 +21,7 @@
   transform: translateX(-70%);
   z-index: 1;
   color: #fff;
+  margin-top: 4rem;
 }
 .AddNews-form{
   margin-left: 10%;
@@ -57,10 +58,35 @@
   position: relative;
   z-index: 99;
   color: #fff;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
 }
 .addImg {
   width: 200px;
 }
+.userTitle {
+  display: inline-block;
+  width: 200px;
+}
 .btn {
   color: #fff;
+  background: red;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.postTitle {
+  width: 70%;
+  margin-bottom: 2rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2rem;
+}
+.postText {
+  height: 200px;
+  width: 70%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  resize: none;
 }

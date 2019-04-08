@@ -109,19 +109,24 @@ class AddNews extends Component {
         if (this.state.user) {
             form = (
                 <div className="add">
-                     <h1> User Есть </h1>
+                     <h1 className="userTitle">You User</h1>
                      <button
                         className="btn"
                         onClick={this.onLogout}
-                    >Выйти</button>
+                        >Выйти</button>
 
+                        <br/>   
                     <input
+                        className="postTitle"
                         type="text"
                         placeholder="Введите название статьи"/>
 
                     <br/>
 
-                    <textarea placeholder="Ваша статья"></textarea>
+                    <textarea
+                        className="postText"
+                        placeholder="Ваша статья">
+                    </textarea>
 
                     <h1>ДОбавить картинку</h1>
 
