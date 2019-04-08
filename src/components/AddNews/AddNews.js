@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './AddNews.css';
 import firebase, {auth} from '../../config/fbConfig';
+import Auth from '../Auth/Auth';
+import axios from '../../axios-news';
 
 class AddNews extends Component {
     state = {
@@ -9,7 +11,9 @@ class AddNews extends Component {
         fileUrl: null,
         file: null,
         user: null,
-        progress: ''
+        progress: '',
+        title: '',
+        text: ''
     };
 
     onChangeHandler = e => {
@@ -24,7 +28,9 @@ class AddNews extends Component {
             .signInWithEmailAndPassword(this.state.email, this.state.pass)
             .then(result => {
                 const user = result.user;
-                this.setState({user});
+                this.setState({
+                    user
+                });
             }).catch(error => {
                 console.log(error);
             });
@@ -52,8 +58,19 @@ class AddNews extends Component {
         })
     };
 
-    onFileUpload = (e) => {
+    onSubmitHandler = e => {
         e.preventDefault();
+        const newsItem = {
+            title: this.state.title,
+            text: this.state.text
+        };
+
+        this.onFileUpload(newsItem);
+
+        e.target.reset();
+    }
+
+    onFileUpload = (newsItem) => {
         const file = this.state.file;
         const fileName = file.name;
 
@@ -71,40 +88,30 @@ class AddNews extends Component {
             () => {
                 uploadTask.snapshot.ref.getDownloadURL()
                 .then(fileUrl => {
-                    this.setState({fileUrl});
+                    newsItem.imgUrl = fileUrl;
+
+                    axios.post('/news.json', newsItem)
+                        .then(response => {
+                            this.setState({
+                                title: '',
+                                text: ''
+                            });
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        });
                 })
             }
         )
     };
-
-
-
     render() {
         let form = (
-            <form onSubmit = {this.onLogin}
-            className = "AddNews-form" >
-            <h1 className = "addNewsTitle" > Log in to add news </h1>
-                < input className = "formText"
-                type = "email"
-                name = "email"
-                placeholder = "Email"
-                autoComplete = "off"
-                value={this.state.email} 
-                onChange={this.onChangeHandler}/>
-            
-                <br/>
-                < input className = "formText"
-                type = "password"
-                name = "pass"
-                placeholder = "Password" 
-                value = {this.state.pass}
-                onChange = {this.onChangeHandler}
-                />
-
-                <br/>
-                <input className="formSubmit" type="submit" placeholder="Add News"/>
-            </form>
-            
+            <Auth
+                email={this.state.email}
+                pass={this.state.pass}
+                login={this.onLogin}
+                change={this.onChangeHandler}
+            />
         );
         if (this.state.user) {
             form = (
@@ -115,22 +122,30 @@ class AddNews extends Component {
                         onClick={this.onLogout}
                         >Выйти</button>
 
-                        <br/>   
-                    <input
-                        className="postTitle"
-                        type="text"
-                        placeholder="Введите название статьи"/>
+                        <br/>
 
-                    <br/>
+                    <form onSubmit = {this.onSubmitHandler}>
+                        <input
+                            className="postTitle"
+                            type="text"
+                            name="title"
+                            placeholder="Введите название статьи"
+                            value={this.state.title}
+                            onChange={this.onChangeHandler}
+                        />
 
-                    <textarea
-                        className="postText"
-                        placeholder="Ваша статья">
-                    </textarea>
+                        <br/>
 
-                    <h1>ДОбавить картинку</h1>
+                        <textarea
+                            className="postText"
+                            name="text"
+                            placeholder="Ваша статья"
+                            value={this.state.text}
+                            onChange={this.onChangeHandler}
+                        />
 
-                    < form onSubmit = {this.onFileUpload}>
+                        <h1>Дoбавить картинку</h1>
+
                         <input
                         onChange = {this.onFileSelectHandler}
                         type = "file"
@@ -139,18 +154,9 @@ class AddNews extends Component {
 
                         <br/>
 
-                        <div
-                            style={{width: this.state.progress}}
-                        >
+                        <div style={{width: this.state.progress + "%"}}>
 
                         </div>
-                        <br/>
-
-                        {
-                            this.state.fileUrl ?
-                                <img className="addImg" src={this.state.fileUrl} alt="img"/>:
-                            null
-                        }
                     </form>
                     
                 </div>
