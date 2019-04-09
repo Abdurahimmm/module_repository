@@ -1,32 +1,37 @@
 import React, { Component } from 'react';
 import axios from '../../axios-news.js';
+import NewsItem from './NewsItem/NewsItem.js';
 
 class News extends Component {
 
     state = {
-        title: '',
-        text: ''
+        news: []
     }
     componentDidMount() {
         axios.get('/news.json')
             .then(response => {
                 this.setState({
-                    title: '',
-                    text: ''
+                    news: response.data
                 });
             })
             .catch(error => {
                 console.log(error);
             });
     }
+    
     render() {
+        let news = Object.keys(this.state.news).map(newsId => {
+            const newsItem = this.state.news[newsId];
+             return <NewsItem
+                    key={newsId}
+                    title={newsItem.title}
+                    text={newsItem.text}
+                    imgUrl={newsItem.imgUrl}
+                 />;
+        });
         return (
             <div>
-                <div>
-                    <h1>Title here</h1>
-                    <p>Text here</p>
-
-                </div>
+                {news}
             </div>
         );
     }

@@ -18,7 +18,7 @@ class Auth extends Component {
         <input className = "formText"
           type = "password"
           name = "pass"
-          placeholder = "Password" 
+          placeholder = "Password"
           value = {this.props.pass}
           onChange = {this.props.change}
         />

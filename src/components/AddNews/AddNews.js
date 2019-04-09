@@ -96,6 +96,7 @@ class AddNews extends Component {
                                 title: '',
                                 text: ''
                             });
+                            this.props.history.push('/news');
                         })
                         .catch(error => {
                             console.log(error);
