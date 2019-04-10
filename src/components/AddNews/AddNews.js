@@ -62,7 +62,8 @@ class AddNews extends Component {
         e.preventDefault();
         const newsItem = {
             title: this.state.title,
-            text: this.state.text
+            text: this.state.text,
+            date: new Date().getTime()
         };
 
         this.onFileUpload(newsItem);

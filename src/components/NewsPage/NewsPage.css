@@ -1,0 +1,19 @@
+.newsPageWrap {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.newsPageItem {
+  height: 200px;
+  flex-grow: 1;
+  background: #666;
+  margin-right: 10px;
+}
+.newsPageItem:nth-child(3) {
+  margin-right: 0;
+}
+h1 {
+  text-align: center;
+}
