@@ -2,10 +2,10 @@ import React from 'react';
 
 const NewsItem = (props) => {
   return (
-    <div className="wrapperNews">
-      <h3 className="NewsItemTitle">{props.title}</h3>
-      <img className="NewsItemImage" src={props.imgUrl} alt="ifdbgnbf"/>
-      <p className="NewsItemText">{props.text}</p>
+    <div className="articlesWrap">
+      <h3 className="articlesTitle">{props.title}</h3>
+      <img className="articlesImage" src={props.imgUrl} alt="ifdbgnbf"/>
+      <p className="articlesText">{props.text}</p>
     </div>
   );
 }

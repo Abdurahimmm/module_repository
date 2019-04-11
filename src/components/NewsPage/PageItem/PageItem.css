@@ -1,15 +1,27 @@
-.PageItem {
-  display: flex;
-}
 .wrapperNews {
-  
+  width: 25%;
+  margin-right: 7.5%;
+  text-align: center;
+  border: 1px solid #ccc;
+  background: #ededed;
+}
+.wrapperNews:nth-child(1) {
+  margin-left: 6%;
+}
+.wrapperNews:nth-child(3) {
+  margin-right: 0;
 }
 .NewsItemTitle {
-
+  border-top: 1px solid #ccc;
 }
 .NewsItemImage {
-
+  max-width: 50%;
 }
 .NewsItemText {
-
+  text-align: center;
+  max-height: 100px;
+  max-width: 90%;
+  overflow: hidden;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }

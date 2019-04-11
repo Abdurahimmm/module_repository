@@ -39,7 +39,7 @@ class NewsPage extends Component {
     return (
 
       <Fragment>
-        <div>
+        <div className="PageList">
           {news}
         </div>
       </Fragment>
