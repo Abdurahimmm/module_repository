@@ -1,12 +1,12 @@
 .footer-nav {
-    margin-top: 2rem;
-    margin-left: 100px;
-    flex-grow: 1;
+    width: 33.3333333333%;
 }
 .NavigationFooterList {
+    margin-top: 2rem;
     list-style: none;
 }
 .NavLink {
+    margin-left: 100px;
     margin-right: 3rem;
     font-family: 'Lobster', cursive;
     font-family: 'Bree Serif', serif;

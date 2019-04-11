@@ -4,6 +4,7 @@
   text-align: center;
   border: 1px solid #ccc;
   background: #ededed;
+  position: relative;
 }
 .wrapperNews:nth-child(1) {
   margin-left: 6%;
@@ -14,14 +15,42 @@
 .NewsItemTitle {
   border-top: 1px solid #ccc;
 }
+.imgWrap {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  border: 10px solid #ccc;
+  background: #ccc;
+  overflow: hidden;
+}
 .NewsItemImage {
-  max-width: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 30px;
+  margin: auto 0;
 }
 .NewsItemText {
   text-align: center;
   max-height: 100px;
-  max-width: 90%;
+  width: 80%;
   overflow: hidden;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+.NewsPageLink {
+  font-family: Arial;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  background: blue;
+  padding: 15px 25px;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.NewsPageLink:hover {
+  text-decoration: none;
+  color: #fff;
 }

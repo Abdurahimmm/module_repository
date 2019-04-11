@@ -5,10 +5,12 @@ import {NavLink} from 'react-router-dom';
 const PageItem = (props) => {
   return (
         <div className="wrapperNews">
-          <img className="NewsItemImage" src={props.fileUrl} alt="img$"/>
+          <div className="imgWrap">
+            <img className="NewsItemImage" src={props.fileUrl} alt="img$"/>
+          </div>
           <h3 className="NewsItemTitle">{props.title}</h3>
           <p className="NewsItemText">{props.text}</p>
-          <NavLink to='/News'>Read More</NavLink>
+          <NavLink className="NewsPageLink" to='/viewnews'>Read More</NavLink>
         </div>
   );
 }

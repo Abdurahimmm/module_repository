@@ -1,7 +1,8 @@
 .footer-wrap {
-    flex-grow: 1;
+    width: 33.3333333333%;
 }
 .FooterIcon {
+    margin: 0 auto;
     width: 180px;
     text-align: center;
     margin-top: 2rem;
