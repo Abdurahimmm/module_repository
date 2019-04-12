@@ -1,0 +1,14 @@
+.viewNewsLink {
+  font-family: Arial;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  background: blue;
+  padding: 15px 25px;
+  border-radius: 30px;
+  margin-bottom: 100px;
+}
+.viewNewsLink:hover {
+  text-decoration: none;
+  color: #fff;
+}

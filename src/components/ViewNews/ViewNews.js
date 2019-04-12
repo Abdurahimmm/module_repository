@@ -4,27 +4,27 @@ import axios from '../../axios-news';
 
 class ViewNews extends Component {
     state = {
-        news: {}
+        newsItem: {}
     }
     componentDidMount() {
-        axios.get('/news.json')
+        
+        const id = this.props.match.params.id;
+        axios.get('/news/' + id + '.json')
             .then(response => {
-                console.log(response)
+                this.setState({
+                    newsItem: response.data
+                });
         });
     }
     render() {
-        let news = Object.keys(this.state.news).map(newsId => {
-            const newsItem = this.state.news[newsId];
-             return <NewsItem
-                    key={newsId}
-                    title={newsItem.title}
-                    text={newsItem.text}
-                    imgUrl={newsItem.imgUrl}
-                 />;
-        });
+        const {title, text, imgUrl} = this.state.newsItem;
         return (
-            <div>
-                
+            <div className="viewWrapper">
+                <div className="viewImgWrap">
+                    <h1 className="viewTitle ">{title}</h1>
+                </div>
+                <img className="viewImage" src={imgUrl} alt="Image With ViewNews"/>
+                <p className="viewText">{text}</p>
             </div>
         );
     }

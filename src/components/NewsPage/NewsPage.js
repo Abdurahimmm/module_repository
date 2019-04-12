@@ -29,9 +29,11 @@ class NewsPage extends Component {
             const newsItem = this.state.news[newsId];
              return (
                <PageItem
+                  key={newsId}
                   title={newsItem.title}
                   text={newsItem.text}
                   fileUrl={newsItem.imgUrl}
+                  id={newsId}
                />
              )
        

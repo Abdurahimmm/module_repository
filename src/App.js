@@ -18,7 +18,7 @@ class App extends Component {
           <Route path='/news' component={News}/>
           <Route path='/addnews' component={AddNews}/>
           <Route path='/contact' component={Contact}/>
-          <Route path='/viewnews' component={ViewNews}/>
+          <Route path='/veiwnews/:id' component={ViewNews}/>
         </Switch>
       </Layout>
     );

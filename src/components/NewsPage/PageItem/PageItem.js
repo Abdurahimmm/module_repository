@@ -10,7 +10,7 @@ const PageItem = (props) => {
           </div>
           <h3 className="NewsItemTitle">{props.title}</h3>
           <p className="NewsItemText">{props.text}</p>
-          <NavLink className="NewsPageLink" to='/viewnews'>Read More</NavLink>
+          <NavLink className="NewsPageLink" to={'/veiwnews/' + props.id}>Read More</NavLink>
         </div>
   );
 }

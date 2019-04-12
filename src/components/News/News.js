@@ -27,6 +27,7 @@ class News extends Component {
                     title={newsItem.title}
                     text={newsItem.text}
                     imgUrl={newsItem.imgUrl}
+                    id={newsId}
                  />;
         });
         return (
