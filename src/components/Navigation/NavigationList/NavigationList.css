@@ -22,3 +22,31 @@
     text-decoration: none;
     color: #8e8d8d;
 }
+
+@media screen and (max-width: 320px) {
+    .navigation {
+        width: 100%;
+        display: block;
+    }
+    .Navigation-list {
+        min-width: 100%;
+        overflow: hidden;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        text-align: left;
+    }
+    /*.Navigation-item:first-child {*/
+        /*margin-left: -40px;*/
+    /*}*/
+    .Navigation-item:nth-child(2) {
+        margin-top: 2rem;
+    }
+    .Navigation-item:last-child {
+        margin-top: 2rem;
+    }
+    .navLink {
+        font-family: Arial;
+        font-size: 1rem;
+        margin-right: 0;    
+    }
+}

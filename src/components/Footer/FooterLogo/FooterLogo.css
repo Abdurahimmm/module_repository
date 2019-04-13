@@ -2,3 +2,8 @@
     width: 33.3333333333%;
     margin-top: 2rem; 
 }
+@media screen and (max-width: 320px) {
+    .footerLogo {
+        display: none;
+    }
+}
