@@ -21,3 +21,47 @@
     text-decoration: none;
     color: #8e8d8d;
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .NavigationFooterList {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .footer-nav {
+        width: 100%;
+    }
+    .NavLink {
+        margin-left: 0;
+        color: #0736c4;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .footer-nav {
+        width: 40%;
+        max-height: 100%;
+    }
+    .NavigationFooterList {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
+    .NavLink {
+        margin-left: 0;
+        color: #0736c4;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .NavLink {
+        margin-left: 2rem;
+    }
+    .Top {
+        display: none;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+    .Top {
+        display: none;
+    }
+}

@@ -25,13 +25,12 @@ class News extends Component {
              return <NewsItem
                     key={newsId}
                     title={newsItem.title}
-                    text={newsItem.text}
-                    imgUrl={newsItem.imgUrl}
                     id={newsId}
+                    imgUrl={NewsItem.imgUrl}
                  />;
         });
         return (
-            <div>
+            <div className="wrapperNewsItem">
                 {news}
             </div>
         );

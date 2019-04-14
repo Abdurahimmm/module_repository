@@ -6,7 +6,9 @@ const Layout = (props) => {
   return (
     <Fragment>
       <ToolBar/>
-      <main className="main">
+      <main className="main" style={{
+      	background: "#000"
+      }}>
         {props.children}
       </main>
       <Footer></Footer>

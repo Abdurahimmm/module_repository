@@ -1,14 +1,93 @@
-.viewNewsLink {
-  font-family: Arial;
-  font-weight: bold;
-  color: #fff;
-  font-size: 1rem;
-  background: blue;
-  padding: 15px 25px;
-  border-radius: 30px;
-  margin-bottom: 100px;
+.wrapperNewsItem {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-end;
 }
-.viewNewsLink:hover {
+.articlesWrap {
+  width: 24%;
+  height: 300px;
+  margin-bottom: 1rem;
+  background: #ccc;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  text-align: center;
+  border-radius: 10px;
+}
+.articlesWrap:nth-child(odd) {
+  margin-right: 0.66666666666%;
+}
+.articlesWrap:nth-child(even) {
+  margin-left: 0.66666666666%;
+}
+.articlesWrap:nth-child(4n+2) {
+  margin-right: 1.333333333333333%;
+}
+.articlesTitle {
+  
+}
+.articlesLink {
+  display: inline-block;
+  background: transparent;
+  color: #000;
+  font-family: Arial;
+  font-size: 1.5rem;
+  align-content: center;
+}
+.articlesLink:hover {
   text-decoration: none;
   color: #fff;
+  background: #0736c4;
+}
+.articlesWrap:hover .articlesLink {
+  color: #000;
+  text-decoration: none;
+  color: #fff;
+  background: #0736c4;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .articlesWrap:nth-child(odd) {
+    width: 90%;
+    margin: 1rem 5% 0 5%;
+  }
+  .articlesWrap:nth-child(even) {
+    width: 90%;
+    margin: 1rem 5% 0 5%;
+  }
+  .articlesLink {
+    background: #0736c4;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .articlesWrap:nth-child(odd) {
+    width: 44%;
+    margin: 1rem 3% 0 3%;
+  }
+  .articlesWrap:nth-child(even) {
+    width: 44%;
+    margin: 1rem 3% 0 3%;
+  }
+  .articlesLink {
+    background: #0736c4;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .articlesWrap:nth-child(odd) {
+    width: 29%;
+    margin: 1rem 2% 0 2%;
+  }
+  .articlesWrap:nth-child(even) {
+    width: 29%;
+    margin: 1rem 2% 0 2%;
+  }
+  .articlesLink {
+    background: #0736c4;
+    color: #fff;
+  }
 }

@@ -131,7 +131,7 @@ class AddNews extends Component {
                             className="postTitle"
                             type="text"
                             name="title"
-                            placeholder="Введите название статьи"
+                            placeholder="Title for post"
                             value={this.state.title}
                             onChange={this.onChangeHandler}
                         />
@@ -141,18 +141,20 @@ class AddNews extends Component {
                         <textarea
                             className="postText"
                             name="text"
-                            placeholder="Ваша статья"
+                            placeholder="Your post"
                             value={this.state.text}
                             onChange={this.onChangeHandler}
                         />
 
-                        <h1>Дoбавить картинку</h1>
+                        <h1>Add Image</h1>
 
                         <input
+                        required
                         onChange = {this.onFileSelectHandler}
                         type = "file"
                         name = "file" />
-                        <button>Загрузить</button>
+                        <hr/>
+                        <button>Add News</button>
 
                         <br/>
 

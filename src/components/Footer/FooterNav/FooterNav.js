@@ -7,7 +7,7 @@ const FooterNav = () => {
         <div className="footer-nav">
             <ul className="NavigationFooterList">
                 <li className="NavigationItem">
-                    <NavLink className="NavLink" to='/'>NewsBuilder</NavLink>
+                    <NavLink className="NavLink" to='/'>Home</NavLink>
                 </li>
 
                 <li className="NavigationItem">
@@ -20,6 +20,10 @@ const FooterNav = () => {
 
                 <li className="NavigationItem">
                     <NavLink className="NavLink" to='/contact'>Contact</NavLink>
+                </li>
+
+                <li className="NavigationItemTop">
+                    <a className="NavLink Top" href="#top">ToTheTop</a>
                 </li>
             </ul>
         </div>

@@ -1,13 +1,14 @@
 .wrapperNews {
-  width: 25%;
-  margin-right: 7.5%;
+  width: 30%;
+  height: 500px;
+  margin-right: 1rem;
   text-align: center;
   border: 1px solid #ccc;
   background: #ededed;
   position: relative;
 }
 .wrapperNews:nth-child(1) {
-  margin-left: 6%;
+  /*margin-left: 6%;*/
 }
 .wrapperNews:nth-child(3) {
   margin-right: 0;
@@ -17,25 +18,32 @@
 }
 .imgWrap {
   width: 100%;
-  height: 200px;
-  background: #fff;
-  border: 10px solid #ccc;
+  height: 40%;
+  background: #ccc;
+  border: -20px solid #ccc;
+  border-radius: 30px;
   background: #ccc;
   overflow: hidden;
 }
 .NewsItemImage {
-  max-height: 100%;
-  max-width: 100%;
-  border-radius: 30px;
+  height: 100%;
   margin: auto 0;
 }
 .NewsItemText {
   text-align: center;
-  max-height: 100px;
+  max-height: 120px;
   width: 80%;
   overflow: hidden;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+.linkWrap {
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
 }
 .NewsPageLink {
   font-family: Arial;
@@ -46,11 +54,73 @@
   padding: 15px 25px;
   border-radius: 30px;
   position: absolute;
-  bottom: 10px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 .NewsPageLink:hover {
   text-decoration: none;
   color: #fff;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .wrapperNews {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .wrapperNews:nth-child(1) {
+    margin-left: 0;
+  }
+  .imgWrap {
+    border: 0;
+    border-radius: 0;
+    background: #ededed;
+    padding-top: 1rem;
+  }
+  .NewsItemImage {
+    border-radius: 20px;
+  }
+  .NewsItemTitle {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 960px) {
+  .wrapperNews {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    margin-top: 1rem;
+  }
+  .wrapperNews:first-child {
+    margin-left: 0;
+  }
+  .NewsItemTitle {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    text-align: center;
+    align-self: center;
+    border-top: none;
+    font-family: Arial, sans-serief;
+  }
+  .imgWrap {
+    grid-column: 1/1;
+    grid-row: 2/2;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+
+  }
+  .NewsItemText {
+    grid-column: 2/2;
+    grid-row: 1/3;
+    max-height: 67%;
+    margin-top: 2rem;
+  }
+  .linkWrap {
+    grid-column: 2/2;
+    grid-row: 2/2;
+  }
+
 }

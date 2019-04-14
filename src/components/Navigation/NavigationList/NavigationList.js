@@ -6,23 +6,15 @@ const NavigationList = (props) => {
 
   return (
     <div className="navigation">
-      <ul className="Navigation-list">
-        <li className="Navigation-item">
-          <NavLink className="navLink" to='/'>NewsBuilder</NavLink>
-        </li>
+      <div className="Navigation-list">
+        <NavLink className="navLink" to='/'>Home</NavLink>
 
-        <li className="Navigation-item">
-          <NavLink className="navLink" to='/news'>News</NavLink>
-        </li>
+        <NavLink className="navLink" to='/news'>News</NavLink>
 
-        <li className="Navigation-item">
-          <NavLink className="navLink" to='/addnews'>AddNews</NavLink>
-        </li>
+        <NavLink className="navLink" to='/addnews'>AddNews</NavLink>
 
-        <li className="Navigation-item">
-          <NavLink className="navLink" to='/contact'>Contact</NavLink>
-        </li>
-      </ul>
+        <NavLink className="navLink" to='/contact'>Contact</NavLink>
+      </div>
     </div>
   );
 }
